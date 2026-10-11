@@ -41,7 +41,7 @@ There are two halves. The **build** half runs ahead of time and fills the
 database. The **query** half runs each time someone asks for a film.
 
 ### Build: filling the database (offline)
-
+ 
 ```
 Reviews ──▶ Feelings model (ours) ──▶ scores per review ──▶ average per film ──▶ FEELINGS TABLE
 
