@@ -1,6 +1,8 @@
+
 import Link from "next/link";
 import Faq, { type FaqItem } from "@/components/Faq";
 
+// Defines the three discovery steps
 const STEPS = [
   {
     n: "01",
@@ -15,14 +17,15 @@ const STEPS = [
   {
     n: "03",
     title: "Get matches with reasons",
-    body: "Every recommendation is ranked and explained — grounded in the analysis it was retrieved from.",
+    body: "Every recommendation is ranked and explained — based on the analysis it was retrieved from.",
   },
 ];
 
+// Stores questions and answers
 const FAQS: FaqItem[] = [
   {
     q: "What is SceneHawk?",
-    a: "A film discovery system that searches by experience — atmosphere, pacing, and visual language — instead of genre labels or ratings. Under the hood it's a multi-agent pipeline running over a curated analytical film corpus.",
+    a: "A film discovery system that searches by experience — atmosphere, pacing, and visual language — instead of genre labels or ratings. Under the hood, it's a multi-agent pipeline running over a curated analytical film corpus.",
   },
   {
     q: "How is this different from IMDb or Netflix?",
@@ -38,14 +41,15 @@ const FAQS: FaqItem[] = [
   },
   {
     q: "Why recommend films I've never heard of?",
-    a: "Conventional systems surface the same popular titles. SceneHawk's corpus deliberately includes cult and obscure films — matching on experience rather than popularity surfaces things genre filters bury.",
+    a: "Conventional systems surface the same popular titles. SceneHawk's corpus deliberately includes cult and obscure films — matching on experience rather than popularity helps surface titles that genre filters bury.",
   },
 ];
 
+// Renders the main homepage content
 export default function Home() {
   return (
     <div>
-      {/* ─── Hero ─────────────────────────────────────────── */}
+      {/* Displays the main introduction */}
       <section className="pt-14 md:pt-28 pb-16 md:pb-24 max-w-3xl">
         <p className="text-[11px] tracking-[0.35em] uppercase text-[#e0632f] mb-6 md:mb-8">
           Multi-agent film discovery
@@ -76,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── How it works ─────────────────────────────────── */}
+      {/* Explains the discovery process */}
       <section
         id="how-it-works"
         className="py-12 md:py-20 border-t border-[#2a2825]"
@@ -96,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FAQ ──────────────────────────────────────────── */}
+      {/* Answers common user questions */}
       <section className="py-16 md:py-24 border-t border-[#2a2825]">
         <h2 className="font-display text-4xl md:text-5xl mb-8">
           <em className="text-[#e0632f]">FAQ</em>
